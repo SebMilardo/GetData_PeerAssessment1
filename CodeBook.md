@@ -61,22 +61,12 @@ tBodyGyroJerkMean
 
 The R script does the following: 
 
-1. Merges the training and the test sets to create one data set.
+1. Merges the training and the test sets to create one data set. In order to merge the data, a function called "getData" reads the content of the test and the train folders. The results are then combined in the variable called "Data"
 
-In order to merge the data, a function called "getData" reads the content of the test and the train folders. The results are then combined in the variable called "Data"
+2. Extracts only the measurements on the mean and standard deviation for each measurement. The measurement on the mean and std are selected using grep 
 
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set. Activity names are extracted from activity_labels.txt
 
-The measurement on the mean and std are selected using grep 
+4. Appropriately labels the data set with descriptive variable names. Descriptive variable names are extracted from features.txt
 
-3. Uses descriptive activity names to name the activities in the data set
-
-Activity names are extracted from activity_labels.txt
-
-4. Appropriately labels the data set with descriptive variable names. 
-
-Descriptive variable names are extracted from features.txt
-
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-The tidy data set is stored in tidyData.txt
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. The tidy data set is stored in tidyData.txt
